@@ -1,3 +1,4 @@
+%% Generate layerOuput.m file
 clc
 clear
 fileName = ['layerOutput' '.m'];
@@ -6,11 +7,7 @@ fid = fopen(fileName,'w');
 
 load data network; 
 
-%load randomNN network
 layerNum = length(network.bias);
-
-%layerInput.xmin;layerInput.xmax;
-%network.weight;network.bias;network.activeType
 
 fprintf(fid,'function y = layerOutput(layerNum,input,network)\n');
 fprintf(fid,'switch layerNum\n');

@@ -1,8 +1,4 @@
-%clc
-%clear
-%input_min = [0.8,-0.5];
-%input_max = [1.2,0.5];
-%num_division = [10,10];
+%% Partition 2D input set
 function input = inputDiscretize(input_min,input_max,num_division)
 for i = 1:1:2
     step = (input_max-input_min)/num_division(i);

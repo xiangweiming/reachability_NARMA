@@ -1,5 +1,4 @@
-%% Obtain the input for reachable set computation
-clc
+%% Example 2
 clear
 load data network net
 figure
@@ -36,7 +35,6 @@ Y_max = [inputMax(2), Y_max];
    
 k=0:1:K;
 
-%figure
 hold on;
 fill([k fliplr(k)],[Y_min fliplr(Y_max)],'b','edgecolor','b');
 
@@ -44,7 +42,6 @@ fill([k fliplr(k)],[Y_min fliplr(Y_max)],'b','edgecolor','b');
 %load data network net
 input_min = inputMin;
 input_max = inputMax;
-%K=50;
 
 for n=1:1:num_sim
     input_sequence = input_min(1)+ (input_max(1)-input_min(1))*rand(1,K);
