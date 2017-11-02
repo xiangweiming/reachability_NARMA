@@ -1,20 +1,20 @@
 %% Example 1 
 clc
 clear
-%% Generate random NN
+%% Generate or load random NN
 numNueron = [2,5,2];
 network.activeType = {'tansig','purelin'};
 numLayer = length(numNueron)-1;
 
-for n = 1:1:numLayer
-    network.weight{n} = randn(numNueron(n+1),numNueron(n));
-    network.bias{n} = randn(numNueron(n+1),1);
-end
+%for n = 1:1:numLayer
+%    network.weight{n} = randn(numNueron(n+1),numNueron(n));
+%    network.bias{n} = randn(numNueron(n+1),1);
+%end
 
 load data network
 %save data network
 
-%% Generate the optimal solution m file
+%% Generate the optimal solution m file, if use the line below, need to pause for a while to generate the m file
 %run('generateFun.m')
 
 %% Generate 2D disceretized input sets 
