@@ -1,7 +1,7 @@
+%% Example 1 
 clc
 clear
 %% Generate random NN
-
 numNueron = [2,5,2];
 network.activeType = {'tansig','purelin'};
 numLayer = length(numNueron)-1;
@@ -12,11 +12,10 @@ for n = 1:1:numLayer
 end
 
 load data network
-
-save data network
+%save data network
 
 %% Generate the optimal solution m file
-run('generateFun.m')
+%run('generateFun.m')
 
 %% Generate 2D disceretized input sets 
 M = [50, 50];
@@ -57,7 +56,7 @@ for i = 1:1:length(y)
 end
 
 for i = 1:1:5000
-    inputPoint = [inputMin(1) + (inputMax(1)-inputMin(1))*rand;inputMin(2) + (inputMax(2)-inputMin(2))*rand]% center of input set
+    inputPoint = [inputMin(1) + (inputMax(1)-inputMin(1))*rand;inputMin(2) + (inputMax(2)-inputMin(2))*rand];% center of input set
     yPoint = networkOutputPoint(inputPoint,network); % [y.y0,y.radius] = [center of output set, radius of output set]
     plot(yPoint(1),yPoint(2),'.r')
     %hold on

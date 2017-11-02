@@ -1,3 +1,4 @@
+%% 3 types of activation functions
 function y = activeFun(x,activeType) 
 switch activeType
     case 'tansig'

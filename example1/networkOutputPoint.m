@@ -1,5 +1,4 @@
-%hidenLayerOutput FUNCTION is to compute the output of the layer y = f(x)
-
+%% Compute the output of the layer y = f(x)
 function y = networkOutputPoint(input,network) 
 
 layerNum = length(network.bias);
