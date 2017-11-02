@@ -16,7 +16,7 @@ load data network
 save data network
 
 %% Generate the optimal solution m file
-run('generateFun.m')
+%run('generateFun.m')
 
 %% Generate 2D disceretized input sets 
 M = [50, 50];
